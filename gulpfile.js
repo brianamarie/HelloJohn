@@ -19,10 +19,11 @@ gulp.task('css', function() {
 
 // JADE
 gulp.task('jade', function() {
+
   return gulp.src('views/*.jade')
-    .pipe(jade({
-      pretty: true
-    }))
+    //.pipe(jade({
+    //  pretty: true
+    //}))
     .pipe(gulp.dest('public'))
 });
 
