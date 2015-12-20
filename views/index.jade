@@ -68,7 +68,27 @@ block content
       .col-xs-12.col-sm-4
         h5 It's Morrocan Mint, you bitch!
         p Jon and John discuss tea, hats, and muppets.
-        a(href="#") Listen here.
+        .pcast-player
+          .pcast-player-controls
+            button.pcast-play
+              i.fa.fa-play
+              span Play
+            button.pcast-pause
+              i.fa.fa-pause
+              span Pause
+            button.pcast-rewind
+              i.fa.fa-fast-backward
+              span Rewind
+            span.pcast-currenttime.pcast-time 00:00
+            progress.pcast-progress(value='0')
+            span.pcast-duration.pcast-time 00:00
+            button.pcast-speed 1x
+            button.pcast-mute
+              i.fa.fa-volume-up
+              span Mute/Unmute
+          audio(src='http://s3.amazonaws.com/ShopTalk/080_rapidfire_19.mp3')
+          a.pcast-download(href='http://s3.amazonaws.com/ShopTalk/080_rapidfire_19.mp3')
+        a(href="#") More here.
       .col-xs-12.col-sm-4
         img(src="https://i.imgflip.com/hslot.jpg").img-responsive
         p Hello John KC is the best podcast in the block.
