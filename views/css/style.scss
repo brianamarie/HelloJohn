@@ -33,7 +33,8 @@ body {
 
   progress {
     height: 13px;
-    width: calc(100% - 300px);
+    width: calc(100% - 335px);
+    padding: 0 5px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -58,7 +59,8 @@ body {
   }
 
   .pcast-speed {
-    width: 2.5em;
+    width: 2em;
+    margin: 0 5px;
   }
 
   .pcast-download {
