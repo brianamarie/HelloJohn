@@ -65,9 +65,13 @@ block content
     h5.text-center Kansas City based Podcast about hedgehogs and flowers.
     br
     .row
+      .col-xs-12.col-sm-4.col-md-3
+        img(src="./images/hellojohn.jpg").img-responsive
+        p Hello John KC is the best podcast in the block.
       .col-xs-12.col-sm-8.col-md-6
+        //latest episode
         h5 Hello New Sponsor.
-        p Jon and John discuss tea, hats, and muppets.
+        p John and Jon discuss whether or not Jon was less than kind during thanksgiving and John continues to complain in 60 seconds.
         .pcast-player
           .pcast-player-controls
             button.pcast-play
@@ -87,11 +91,32 @@ block content
               i.fa.fa-volume-up
               span Mute
           audio(src='http://traffic.libsyn.com/hellojohn/Surprise_New_Sponsor.mp3')
-          a.pcast-download(href='http://s3.amazonaws.com/ShopTalk/080_rapidfire_19.mp3')
+          a.pcast-download(href='http://traffic.libsyn.com/hellojohn/Surprise_New_Sponsor.mp3')
         a(href="#") More here.
-      .col-xs-12.col-sm-4.col-md-3
-        img(src="https://i.imgflip.com/hslot.jpg").img-responsive
-        p Hello John KC is the best podcast in the block.
+        //next latest episode
+        h5 Moroccan Mint You Bitch
+        p John and Jon talk about Boston Clam Chowder and Top Cat's Wedding, Have a discussion about what is and isn't a sport, and to no one's surprise Jon might've made an Ass of himself.
+        .pcast-player
+          .pcast-player-controls
+            button.pcast-play
+              i.fa.fa-play
+              span Play
+            button.pcast-pause
+              i.fa.fa-pause
+              span Pause
+            button.pcast-rewind
+              i.fa.fa-fast-backward
+              span Rewind
+            span.pcast-currenttime.pcast-time 00:00
+            progress.pcast-progress(value='0')
+            span.pcast-duration.pcast-time 00:00
+            button.pcast-speed 1x
+            button.pcast-mute
+              i.fa.fa-volume-up
+              span Mute
+          audio(src='http://traffic.libsyn.com/hellojohn/Moraccan_Mint_You_Bitch.mp3')
+          a.pcast-download(href='http://traffic.libsyn.com/hellojohn/Moraccan_Mint_You_Bitch.mp3')
+        a(href="#") More here.
       .col-xs-12.col-md-3
         h2 Meet Your Makers
         .row
