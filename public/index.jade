@@ -11,54 +11,54 @@ block content
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='#') Brand
+          a.navbar-brand(href='#') HJKC
         // Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav
             li.active
               a(href='#')
-                | Link
+                | About
                 span.sr-only (current)
             li
-              a(href='#') Link
+              a(href='#') Listen
             li.dropdown
               a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                | Dropdown
+                | More
                 span.caret
               ul.dropdown-menu
                 li
-                  a(href='#') Action
+                  a(href='#') Become a guest
                 li
-                  a(href='#') Another action
+                  a(href='#') Become a sponsor
                 li
-                  a(href='#') Something else here
+                  a(href='#') Swag
                 li.divider(role='separator')
                 li
-                  a(href='#') Separated link
+                  a(href='#') Resources
                 li.divider(role='separator')
                 li
-                  a(href='#') One more separated link
+                  a(href='#') Legal
           form.navbar-form.navbar-left(role='search')
             .form-group
               input.form-control(type='text', placeholder='Search')
             button.btn.btn-default(type='submit') Submit
           ul.nav.navbar-nav.navbar-right
             li
-              a(href='#') Link
+              a(href='#') Discover
             li.dropdown
               a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                | Dropdown
+                | Explore
                 span.caret
               ul.dropdown-menu
                 li
-                  a(href='#') Action
+                  a(href='#') This podcast
                 li
-                  a(href='#') Another action
+                  a(href='#') Another podcast
                 li
-                  a(href='#') Something else here
+                  a(href='#') Shoutout here
                 li.divider(role='separator')
                 li
-                  a(href='#') Separated link
+                  a(href='#') Get suggested
         // /.navbar-collapse
       // /.container-fluid
     h1.text-center Hello John
@@ -67,8 +67,9 @@ block content
     .row
       .col-xs-12.col-sm-4.col-md-3
         img(src="./images/hellojohn.jpg").img-responsive
-        p Hello John KC is the best podcast in the block.
+        p.text-center Hello John KC is the best podcast.
       .col-xs-12.col-sm-8.col-md-6
+        //this section could be built with react. default view would be latest episode, but when user changed episode, it would load in place of default
         //latest episode
         h5 Hello New Sponsor.
         p John and Jon discuss whether or not Jon was less than kind during thanksgiving and John continues to complain in 60 seconds.
@@ -120,13 +121,27 @@ block content
       .col-xs-12.col-md-3
         h2 Meet Your Makers
         .row
-          .col-xs-4
+          .col-xs-4.text-center
             img(src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/12036791_10103157853647939_8690026734247235835_n.jpg?oh=bf54a4aae445a14eae0c4182f85fd559&oe=56DA5606").img-responsive
+            a(href="https://twitter.com/johndswift")
+              i.fa.fa-twitter
           .col-xs-8
             p John Swift is the best brother in the world, and he's notorious for being extremely good at giving gifts. Any girlfriend applications can be sent to his sister, Briana.
         br
         .row
-          .col-xs-4
+          .col-xs-4.text-center
             img(src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/12208818_3094738086153_6766763569126486605_n.jpg?oh=bf85b4ddc92b990ba0ce9b5c3f23192d&oe=57159418").img-responsive
+            a(href="https://twitter.com/chasers3")
+              i.fa.fa-twitter
           .col-xs-8
             p Jon Chase has an unusual obsession with John Swift's mother, and has been formally diagnosed with several rare brain disorders and blood diseases. He has been cured multiple times by the power of the Lord Jesus Christ.
+    br
+    .row
+      .col-xs-12.col-sm-4
+        h1 In Recent News
+        p Current sponsor and avid listener Briana Swift is taking suggestions for how to use the 2 minutes air time under her control.
+        p Please submit any ideas to her via twitter, telepathy, or carrier owl.
+      .col-xs-12.col-sm-4
+        img(src="http://blog.vindale.com/wp-content/uploads/2013/04/poll-results-4.jpg").img-responsive
+      .col-xs-12.col-sm-4
+        img(src="http://www.nonprofitcms.org/wp-content/uploads/2010/02/poll.jpg").img-responsive
