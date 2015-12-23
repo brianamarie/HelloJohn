@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -24,6 +25,34 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+
+app.use('/download:podcastName', function(req, res, next){
+  var podcastName = req.params.podcastName;
+  res.download('/Users/Briana/WebstormProjects/HelloJohn/public/audio/' + podcastName, 'Moraccan_Mint_You_Bitch.mp3', function(err){
+    if (err) {
+      // Handle error, but keep in mind the response may be partially-sent
+      // so check res.headersSent
+      console.error(err);
+      res.redirect('/');
+    } else {
+      // decrement a download credit, etc.
+    }
+  });
+});
+
+app.use('/downloadMint', function(req, res, next){
+  res.download('/Users/Briana/WebstormProjects/HelloJohn/public/audio/Moraccan_Mint_You_Bitch.mp3', 'Moraccan_Mint_You_Bitch.mp3', function(err){
+    if (err) {
+      // Handle error, but keep in mind the response may be partially-sent
+      // so check res.headersSent
+      console.error(err);
+      res.redirect('/');
+    } else {
+      // decrement a download credit, etc.
+    }
+  });
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
