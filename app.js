@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
-app.use('/download:podcastName', function(req, res, next){
+app.use('/download/:podcastName', function(req, res, next){
   var podcastName = req.params.podcastName;
   res.download('/Users/Briana/WebstormProjects/HelloJohn/public/audio/' + podcastName, 'Moraccan_Mint_You_Bitch.mp3', function(err){
     if (err) {
