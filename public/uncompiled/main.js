@@ -19,9 +19,10 @@ var PodcastComponent = React.createClass({
     render: function(){
         var podcasts = this.state.audio.map(function(podcast){
            return (
-                <div>
-                    <h4 key={podcast}>{podcast}</h4>
+                <div key={podcast}>
+                    <h4>{podcast.replace(/\-|\_/gi, " ").split(".")[0]}</h4>
                     <audio src={"/audio/" + podcast} controls preload />
+                    <br />
                     <a href={"/download/" + podcast}>Download</a>
                 </div>
             )

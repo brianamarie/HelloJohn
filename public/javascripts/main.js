@@ -24,13 +24,14 @@ var PodcastComponent = React.createClass({
         var podcasts = this.state.audio.map(function (podcast) {
             return React.createElement(
                 "div",
-                null,
+                { key: podcast },
                 React.createElement(
                     "h4",
-                    { key: podcast },
-                    podcast
+                    null,
+                    podcast.replace(/\-|\_/gi, " ").split(".")[0]
                 ),
                 React.createElement("audio", { src: "/audio/" + podcast, controls: true, preload: true }),
+                React.createElement("br", null),
                 React.createElement(
                     "a",
                     { href: "/download/" + podcast },
