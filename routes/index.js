@@ -2,6 +2,20 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 var fs = require("fs");
+var multer = require("multer");
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './public/audio')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname)
+  }
+})
+
+var upload = multer({ storage: storage })
+
+//var upload = multer({dest: "./public/audio"});
 
 var podcastSchema = mongoose.Schema({
   path: String,
@@ -13,6 +27,12 @@ var podcastSchema = mongoose.Schema({
 });
 
 var podcastModel = mongoose.model("podcasts", podcastSchema, "podcasts");
+
+upload.fields([{}])
+
+router.post('/upload', upload.single('name'), function(req, res, next){
+  console.log("file: ", req.file);
+});
 
 router.get('/getFiles', function(req, res, next) {
   fs.readdir("./public/audio", function(err, files){
