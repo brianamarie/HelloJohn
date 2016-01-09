@@ -21,7 +21,7 @@ var PodcastComponent = React.createClass({
            return (
                 <div key={podcast}>
                     <h4>{podcast.replace(/\-|\_/gi, " ").split(".")[0]}</h4>
-                    <audio src={"/audio/" + podcast} controls preload />
+                    <audio src={"/audio/" + podcast} controls preload id="audiopz" />
                     <br />
                     <a href={"/download/" + podcast}>Download</a>
                 </div>

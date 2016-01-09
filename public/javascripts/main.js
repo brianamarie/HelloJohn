@@ -30,7 +30,7 @@ var PodcastComponent = React.createClass({
                     null,
                     podcast.replace(/\-|\_/gi, " ").split(".")[0]
                 ),
-                React.createElement("audio", { src: "/audio/" + podcast, controls: true, preload: true }),
+                React.createElement("audio", { src: "/audio/" + podcast, controls: true, preload: true, id: "audiopz" }),
                 React.createElement("br", null),
                 React.createElement(
                     "a",
